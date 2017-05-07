@@ -1,62 +1,79 @@
-<div class="jumbotron bgclean">
-    <div class="container">
-        
 
-        <div class="row">
-            {% for post in site.posts limit:4 %}	
+<div class="container">
+    <div class="row">
+        {% for post in site.posts limit:4 %}	
 
-                <div class="blogpost-card col-lg-3 col-md-4 col-sm-6 col-xs-6">
-                    <div class="img" style="background-image: url('img/{{ post.img }}')">
-                        <div class="spacer"></div>
-                        <h4>
-                            {{ post.title }}
-                        </h4>
-                    </div>
-                    
-                    <div class="date">
+            <div class="d-flex flex-row col-md-12 p-2 blogpost-card">
+                <div class="img" style="background-image: url('img/{{ post.img }}')"></div>
+                <div>
+                    <div class="date p-2">
                         {{ post.date | date: "%B %e, %Y" }} {{ post.category }}
                     </div>
+                    <h4 class="p-2">
+                        {{ post.title }}
+                    </h4>
+                    <p class="p-2">
+                        {{ post.excerpt }}
+                        {% if post.content contains site.excerpt_separator %}
+                            <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#" class="learnmore">Learn More</a>
+            
+
+            <!-- <div class="blogpost-card col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex  flex-row justify-content-start">
+                <div class="img " style="background-image: url('img/{{ post.img }}')">
+                    <div class="spacer"></div>
+                    <h4>
+                        {{ post.title }}
+                    </h4>
+                </div>
+                
+                <div class="date">
+                    {{ post.date | date: "%B %e, %Y" }} {{ post.category }}
                 </div>
 
-            {% endfor %} 
-        </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <a href="#" class="learnmore">Learn More</a>
+            </div> -->
 
-        <!-- <div class="card-group">
-            <div class="card">
-                <img class="card-img-top" src="img/placeholder.svg" alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><a href="">Read more</a></p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="img/placeholder.svg" alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    <p class="card-text"><a href="">Read more</a></p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="img/placeholder.svg" alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><a href="">Read more</a></p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="img/placeholder.svg" alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><a href="">Read more</a></p>
-                </div>
-            </div>
-        </div> -->
+        {% endfor %} 
     </div>
+
+    <!-- <div class="card-group">
+        <div class="card">
+            <img class="card-img-top" src="img/placeholder.svg" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><a href="">Read more</a></p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="img/placeholder.svg" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><a href="">Read more</a></p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="img/placeholder.svg" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><a href="">Read more</a></p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="img/placeholder.svg" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><a href="">Read more</a></p>
+            </div>
+        </div>
+    </div> -->
 </div>

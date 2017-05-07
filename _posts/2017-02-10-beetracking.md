@@ -2,11 +2,10 @@
 layout: post
 title: Bee Tracking
 img: post_beetracking_preview.png
+excerpt_separator: "<!--excerpt-->"
 ---
 
-
-# Installation: 
-Fork the ``master`` branch and delete ``gh-pages`` branch in it. This is important because ``gh-pages`` branch is used here only to host the blog. You should be using the master branch as the source and create a fresh ``gh-pages`` branch.
+Fork the ``master`` branch and delete <!--excerpt--> ``gh-pages`` branch in it. This is important because ``gh-pages`` branch is used here only to host the blog. You should be using the master branch as the source and create a fresh ``gh-pages`` branch.
 
 Watch my video on instlallation
 <iframe width="100%" height="360" src="https://www.youtube.com/embed/T2nx6tj-ZH4?rel=0" frameborder="0" allowfullscreen></iframe>

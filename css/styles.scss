@@ -12,6 +12,8 @@
     -ms-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     background: rgba(1,1,1,0.1);
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .navbar.scrolled {
@@ -29,7 +31,7 @@
 }
 
 .bgpattern {
-    background-image: url('img/bg_pattern.png')
+    background-image: url('../img/bg_pattern.png')
 }
 
 .bgclean {
@@ -42,42 +44,21 @@
 }
 
 .blogpost-card {
-
     padding: 20px;
-    background-color: #f9d172;
 
     .img {
         background-position: center;
         background-size: cover;
-        height: 140px;
-        width: 100%;
-
-
-        h4 {
-            background-color: rgba(0,0,0,0.5);
-            color: white;
-            margin-bottom: 0;
-            padding: 2px;
-            bottom: 0px;
-        }
-
-        .spacer {
-            height: 100px;
-        }
+        height: 200px; 
+        min-height: 200px;
+        width: 300px;
+        min-width: 300px;
     }
 
     .date {
         padding: 5px;
         font-size: 11px;
-        text-align: right;
-    }
-
-    a {
-        width: 100%;
-    }
-
-    .learnmore {
-        color:black;
+        text-align: left;
     }
 }
 
