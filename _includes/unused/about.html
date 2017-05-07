@@ -1,0 +1,41 @@
+<section id="about" class="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
+        <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+  {% highlight ruby %}
+  def show
+    @widget = Widget(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @widget }
+    end
+  end
+  {% endhighlight %}
+
+  {% for post in site.posts %}	
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong> . {{ post.category }} . <a href="http://erjjones.github.com{{ post.url }}#disqus_thread"></a></small></p>			
+  {% endfor %} 
+
+  <!-- {% for post in site.posts %}
+    <article class="unit-article layout-post">
+        <div class="unit-inner unit-article-inner">
+            <div class="content">
+                <div class="bd">
+                    <div class="entry-content">
+                        {{ post.content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article> 
+  {% endfor %} -->
+</section>

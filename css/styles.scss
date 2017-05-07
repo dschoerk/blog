@@ -1,0 +1,98 @@
+---
+---
+
+// adapted bootstrap classes
+.jumbotron {
+    border-radius: 0px;
+}
+
+.navbar {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background: rgba(1,1,1,0.1);
+}
+
+.navbar.scrolled {
+    background: rgba(255,255,255,0.8); //NON-IE
+}
+
+////
+
+
+
+.name-big {
+    font-size: 96px;
+    text-align: center;
+    font-family: "Lobster Two", serif;
+}
+
+.bgpattern {
+    background-image: url('../img/bg_pattern.png')
+}
+
+.bgclean {
+    background-color: white
+}
+
+.row > .card {
+    padding: 10px; 
+    margin: 0px;
+}
+
+.blogpost-card {
+
+    padding: 20px;
+    background-color: #f9d172;
+
+    .img {
+        background-position: center;
+        background-size: cover;
+        height: 140px;
+        width: 100%;
+
+
+        h4 {
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            margin-bottom: 0;
+            padding: 2px;
+            bottom: 0px;
+        }
+
+        .spacer {
+            height: 100px;
+        }
+    }
+
+    .date {
+        padding: 5px;
+        font-size: 11px;
+        text-align: right;
+    }
+
+    a {
+        width: 100%;
+    }
+
+    .learnmore {
+        color:black;
+    }
+}
+
+
+.isunderlined:after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #f9d172;
+}
+
+/*.isunderlined {
+  color: white;
+  display: block; 
+  border-bottom: 15px solid darken(green, 10);
+  padding-bottom: 8px;
+  line-height: 1.75em;
+}*/
